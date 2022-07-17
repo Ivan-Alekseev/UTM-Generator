@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            Бюджет
+        </title>
+        <link rel="stylesheet" href="css/main.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <div id="block__link">
+            <div id="header_link">site:</div>
+            <input type="text" placeholder="Введите" value="" size="50"></input>
+        </div>
+        <br>
+        <div class="block">
+            <div class="block-item" id="block__utm_source">
+            <div id="header__utm_source">utm_source</div>
+                <div>
+                    <ul id="all_source">
+                        <li><input id="mytarget" type="radio" value="utm_source=mytarget">mytarget</input></li>
+                        <li><input id="yandex" type="radio" value="utm_source=yandex">yandex</input></li>
+                        <li><input id="vk" type="radio" value="utm_source=vk">vk</input></li>
+                        <li><input id="google" type="radio" value="utm_source=google">google</input></li>
+                        <li><input id="instagram" type="radio" value="utm_source=instagram">instagram</input></li>
+                        <li><input id="facebook" type="radio" value="utm_source=facebook">facebook</input></li>
+                        <li><input id="taplink" type="radio" value="utm_source=telegram">telegram</input></li>
+                        <li><input id="taplink" type="radio" value="utm_source=youtube">youtube</input></li>
+                        <li><input id="taplink" type="radio" value="utm_source=sms">sms</input></li>
+                        <li><input id="taplink" type="radio" value="utm_source=rassilka_vk">rassilka_vk</input></li>
+
+                        <!--<li><input id="taplink" type="radio" value="YoursVariant">Ваш вариант:</input>
+                        <input type="text" placeholder="Введите свой вариант" ></input></li> -->
+                    </ul>
+            </div>
+            </div>
+            <div class="block-item" id="block__utm_medium">
+            <div id="header utm_medium">utm_medium</div>
+            <ul id="all_medium">
+                <li><input id="taplink" type="radio" value="utm_source=taplink">taplink</input></li>
+                <li><input id="cpm" type="radio" value="utm_medium=cpm">cpm</input></li>
+                <li><input id="cpc" type="radio" value="utm_medium=cpc">cpc</input></li>
+                <li><input id="display" type="radio" value="utm_medium=display">display</input></li>
+                <li><input id="social_post" type="radio" value="utm_medium=social_post">social_post</input></li>
+                <li><input id="referral" type="radio" value="utm_medium=referral">referral</input></li>
+                <li><input id="social" type="radio" value="utm_medium=social">social</input></li>
+                
+                <!--<li><input id="taplink" type="radio" value="YoursVariant">Ваш вариант:</input>
+                    <input type="text" placeholder="Введите свой вариант"></input></li> -->
+            </ul>
+            </div>
+            <br>
+            <div class="block-item_other">
+                <div class="block-item" id="block__utm_campaign">
+                    <div id="header_utm_campaign">utm_campaign:</div>
+
+                    <input id="utm_campaign-input" type="text" placeholder="Введите" value="" size="19"></input>
+                    
+                    </div>
+                    <br>
+                    <div class="block-item" id="block__utm_content">
+                    <div id="header_utm_content">utm_content:</div>
+                    
+                    <input type="text" placeholder="Введите" value="" size="19"></input>
+                    </div>
+                    <br>
+                    <div class="block-item" id="block__utm_term">
+                    <div id="header_utm_term">utm_term:</div>
+                    
+                    <input type="text" placeholder="Введите" value="" size="19"></input>
+                    </div>
+                    <br>
+            </div>
+            
+        </div>
+        <div id="buttons">
+            <input type="reset" value="Сброс"></input>
+            <input type="submit" value="Go"></input>
+            
+        </div>
+        <div id="result__link">
+            <div>Готовая ссылка:</div>
+            <textarea id="result__link-input"></textarea>
+        </div>
+        <input type="submit" value="Copy"></input>
+        
+        
+
+        <!-- Модули приложения -->
+        <script src="js/model.js"></script>
+        <script src="js/view.js"></script>
+        <script src="js/controller.js"></script>
+
+    </body>
+</html>

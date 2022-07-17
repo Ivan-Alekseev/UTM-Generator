@@ -1,0 +1,41 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    margin: 50;
+}
+
+li {
+    list-style-type: none;
+}
+ul {
+    margin: 0; /* Отступ слева в браузере IE и Opera */
+    padding-left: 0; /* Отступ слева в браузере Firefox, Safari, Chrome */
+   }
+#block__utm_source {
+    display: inline-block;
+    white-space: nowrap;
+    vertical-align: top;
+}   
+.block {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 100%;
+}
+.block-item {
+    border: 1px solid #030d11;
+    margin:5px;
+    padding:5px;
+    
+    
+}
+#result__link-input {
+    width:425px;
+    height:50px;
+}
+
