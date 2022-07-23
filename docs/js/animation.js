@@ -1,4 +1,4 @@
-/*let animationCtrl = function () {
+let animationCtrl = function () {
         let rotationDeg = 0;
         setInterval(rotation, 10);
         function rotation () {
@@ -14,5 +14,5 @@
     document.addEventListener("DOMContentLoaded", ready);
     function ready () {
        animationCtrl();
-}*/
+}
 
