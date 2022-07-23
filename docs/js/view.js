@@ -19,14 +19,14 @@ function UIctrl (ctrl) {
     //полe выбора term
     termInput = document.querySelector("#block__utm_term > input[type=text]");
 
-    //кнопка Go
-    buttonGo = document.querySelector('#buttons >input[value="Go"]');
+    //кнопка "Сгенерировать"
+    buttonGo = document.querySelector('input[name="generate"]');
     //кнопка "Сброс"
-    buttonReset = document.querySelector('#buttons >input[value="Сброс"]');
-    //Кнопка Copy
-    buttonCopy = document.querySelector('input[value="Copy"]');
+    buttonReset = document.querySelector('input[name="reset"]');
+    //Кнопка "Скопировать"
+    buttonCopy = document.querySelector('input[name="сopy"]');
     //Поле готовой ссылки
-    readyLink = document.querySelector('#result__link').lastElementChild;
+    readyLink = document.querySelector('#result__link-input > textarea');
 
 
     //---------Анимация----------------

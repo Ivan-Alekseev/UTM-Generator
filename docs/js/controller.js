@@ -128,9 +128,10 @@
         return term;
     }
 
-    //Событие - нажатие на кнопку Go
+    //Событие - нажатие на кнопку Сгенерировать
     DOMstrings.buttonGo.addEventListener("click", getResult)
     function getResult (e) {
+        
         //Если поля заполнены, то проверяем на знак /?
         if(link && source && medium !== undefined) {
             if (link.indexOf("/?", 1)>0) {
@@ -145,12 +146,12 @@
             DOMstrings.readyLink.value ="Не корректно заполнены поля";
         }
     }
-    //Событие - нажатие на кнопку сбросить
+    //Событие - нажатие на кнопку Сброс
     DOMstrings.buttonReset.addEventListener("click", reset)
     function reset () {
         window.location.reload ();
     }
-    //Событие - нажатие на кнопку Copy
+    //Событие - нажатие на кнопку Скопировать
     DOMstrings.buttonCopy.addEventListener("click", copy)
     function copy () {
         /* сохраняем текстовое поле в переменную text */
