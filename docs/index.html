@@ -13,12 +13,13 @@
         />
     </head>
     <body>
-        <div id="block__link">
+        <div class="main">
+            <div id="block__link">
             <div id="header_link">site:</div>
             <input type="text" placeholder="Введите" value="" size="50"></input>
-        </div>
-        <br>
-        <div class="block">
+            </div>
+            <br>
+            <div class="block">
             <div class="block-item" id="block__utm_source">
             <div id="header__utm_source">utm_source</div>
                 <div>
@@ -77,24 +78,25 @@
                     <br>
             </div>
             
-        </div>
-        <div id="buttons">
+            </div>
+            <div id="buttons">
             <input type="reset" value="Сброс"></input>
             <input type="submit" value="Go"></input>
             
-        </div>
-        <div id="result__link">
+            </div>
+            <div id="result__link">
             <div>Готовая ссылка:</div>
             <textarea id="result__link-input"></textarea>
+            </div>
+            <input type="submit" value="Copy"></input>
         </div>
-        <input type="submit" value="Copy"></input>
-        
         
 
         <!-- Модули приложения -->
         <script src="js/model.js"></script>
         <script src="js/view.js"></script>
         <script src="js/controller.js"></script>
+        <script src="js/animation.js"></script>
 
     </body>
 </html>

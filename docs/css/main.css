@@ -4,10 +4,18 @@
     box-sizing: border-box;
 }
 
-body {
+.main {position:fixed;
+    background: linear-gradient(0deg, #7F7FD5, #86A8E7,#91EAE4);
     font-family: "Open Sans", sans-serif;
-    margin: 50;
+    width:100%;
+    height:100%;
+    margin:0 auto;
+    
 }
+
+
+
+
 
 li {
     list-style-type: none;

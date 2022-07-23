@@ -160,6 +160,9 @@
       //очистим выделение текста, чтобы пользователь "не парился"
       window.getSelection().removeAllRanges();
     }
+
+
+
     return {
         getLink:getLink(),
         getSource:getSource(),

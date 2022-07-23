@@ -4,8 +4,7 @@ function UIctrl (ctrl) {
         buttonGo, buttonReset, readyLink;
     //поле ввода Url страницы
     link = document.querySelector("#block__link").lastElementChild;
-    
-    
+      
     //поля выбора source
     allSource = document.querySelector("#all_source");
     allSourceInput = document.querySelectorAll("#all_source > li > input");
@@ -29,6 +28,10 @@ function UIctrl (ctrl) {
     //Поле готовой ссылки
     readyLink = document.querySelector('#result__link').lastElementChild;
 
+
+    //---------Анимация----------------
+
+    //---------//Анимация------------
     return {
         DOMstrings:{
                 link:link,
