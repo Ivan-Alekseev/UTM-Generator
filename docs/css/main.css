@@ -47,7 +47,7 @@ body {
 input[type=text],textarea {
     border: 1px solid #030d11;
     border-radius: 5px;
-    height: 2em;
+    height: 1.5em;
     background-color: rgba(224, 232, 250, 0.411);
     
 }

@@ -53,7 +53,12 @@
                        element.checked = false;
                     }          
                 })
-                source = e.target.value;
+                if (e.target.value == "My_variant_source") {
+                    
+                    source = `utm_source=${DOMstrings.MyVariantSource.value}`;
+                } else {
+                    source = e.target.value;
+                }
                 
                 return source;
             }
@@ -69,8 +74,14 @@
                    element.checked = false;
                 }          
             })
-            medium =e.target.value;
-            
+            if (e.target.value == "My_variant_medium") {
+                
+                medium = `utm_medium=${DOMstrings.MyVariantMedium.value}`;
+                
+            } else {
+                medium = e.target.value;
+            }
+
             return medium;
         }    
     }
@@ -173,3 +184,4 @@
 
 
 })(modelCtrl, UIctrl);
+

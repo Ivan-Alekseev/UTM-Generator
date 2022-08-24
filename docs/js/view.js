@@ -1,17 +1,19 @@
 function UIctrl (ctrl) {
     let link, linkValue, allSource, 
         allSourceInput, allMedium, allMediumInput,
-        buttonGo, buttonReset, readyLink;
+        buttonGo, buttonReset, readyLink, MyVariantSource;
     //поле ввода Url страницы
     link = document.querySelector("#block__link").lastElementChild;
       
     //поля выбора source
     allSource = document.querySelector("#all_source");
     allSourceInput = document.querySelectorAll("#all_source > li > input");
-    
+    MyVariantSource = document.querySelector("#My_variant_source > input[type=text]");
+
     //поля выбора medium
     allMedium = document.querySelector("#all_medium");
     allMediumInput = document.querySelectorAll("#all_medium > li > input");
+    MyVariantMedium = document.querySelector("#My_variant_medium > input[type=text]");
     //полe выбора campaign
     campaignInput = document.querySelector("#block__utm_campaign > input[type=text]");
     //полe выбора content
@@ -38,9 +40,11 @@ function UIctrl (ctrl) {
                 
                 allSource:allSource,
                 allSourceInput:allSourceInput,
-                
+                MyVariantSource:MyVariantSource,
+
                 allMedium:allMedium,
                 allMediumInput:allMediumInput,
+                MyVariantMedium:MyVariantMedium,
 
                 campaignInput:campaignInput,
                 contentInput:contentInput,
@@ -49,7 +53,9 @@ function UIctrl (ctrl) {
                 buttonGo:buttonGo,
                 buttonReset:buttonReset,
                 buttonCopy:buttonCopy,
-                readyLink:readyLink
+                readyLink:readyLink,
+
+                
 
             }
     }
