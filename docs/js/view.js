@@ -1,14 +1,17 @@
 function UIctrl (ctrl) {
-    let link, linkValue, allSource, 
-        allSourceInput, allMedium, allMediumInput,
-        buttonGo, buttonReset, readyLink, MyVariantSource;
-    //поле ввода Url страницы
-    link = document.querySelector("#block__link").lastElementChild;
-      
-    //поля выбора source
-    allSource = document.querySelector("#all_source");
-    allSourceInput = document.querySelectorAll("#all_source > li > input");
-    MyVariantSource = document.querySelector("#My_variant_source > input[type=text]");
+    let link, linkValue, listSources, 
+        listSourcesInput, allMedium, allMediumInput,
+        buttonGo, buttonReset, readyLink, yoursVariantSource;
+
+    //--------input section_url_link------------//
+    link = document.querySelector(".section_url_link input");
+    //--------// input section_url_link------------//
+
+    //--------choice of sources------------//
+    listSources = document.querySelector(".list_sources");
+    listSourcesInput = document.querySelectorAll(".list_sources > li > input");
+    yoursVariantSource = document.querySelector(".yours_variant_source > input[type=text]");
+    //--------// choice of sources------------//
 
     //поля выбора medium
     allMedium = document.querySelector("#all_medium");
@@ -38,9 +41,9 @@ function UIctrl (ctrl) {
         DOMstrings:{
                 link:link,
                 
-                allSource:allSource,
-                allSourceInput:allSourceInput,
-                MyVariantSource:MyVariantSource,
+                listSources:listSources,
+                listSourcesInput:listSourcesInput,
+                yoursVariantSource:yoursVariantSource,
 
                 allMedium:allMedium,
                 allMediumInput:allMediumInput,

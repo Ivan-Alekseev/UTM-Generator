@@ -7,7 +7,6 @@
     campaign ="";
     content ="";
     term ="";
-
     //Событие - введение ссылки
     DOMstrings.link.addEventListener("change", getLink);
     function getLink () {
@@ -43,19 +42,19 @@
         return link;
     }
     //Событие - выбор галочек на source
-    DOMstrings.allSource.addEventListener("click", getSource);
+    DOMstrings.listSources.addEventListener("click", getSource);
     function getSource (e) {
         if (e.target.type == 'radio') {
                 
                 //События, чтобы стирать все radio метки и оставлять только выбранную
-                DOMstrings.allSourceInput.forEach((element)=> {
+                DOMstrings.listSourcesInput.forEach((element)=> {
                     if (element != e.target) {
                        element.checked = false;
                     }          
                 })
-                if (e.target.value == "My_variant_source") {
+                if (e.target.value == ".yours_variant_source") {
                     
-                    source = `utm_source=${DOMstrings.MyVariantSource.value}`;
+                    source = `utm_source=${DOMstrings.yoursVariantSource.value}`;
                 } else {
                     source = e.target.value;
                 }
@@ -172,9 +171,6 @@
       //очистим выделение текста, чтобы пользователь "не парился"
       window.getSelection().removeAllRanges();
     }
-
-
-
     return {
         getLink:getLink(),
         getSource:getSource(),
