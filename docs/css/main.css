@@ -113,58 +113,58 @@ textarea {
   box-shadow: var(--bs-el);
   border-radius: var(--br);
 }
-.item {
-  display:flex;
-  flex-direction: column;
-  min-width:260px;
-  padding:10px;
-  box-shadow: var(--bs-el);
-  border-radius: var(--br);
-}
 .item .title {
   font-weight:500;
   text-align:center;
   margin:0;
 }
-
 .item .list {
   list-style-type: none;
   padding:0;
   margin:0;
 }
+.item input[type="text"] {
+  border-radius:var(--br);
+  box-sizing:border-box;
+  padding:2px;
+}
 /*-------------- block__utm_source --------------*/
-
+.list_sources li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.yours_variant_source input {
+  height:2em;
+}
 /*--------------// block__utm_source --------------*/
 /*--------------block-utm-medium--------------*/
+.list_medium li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.yours_variant_medium input {
+  height:2em;
+}
 /*--------------// block-utm-medium--------------*/
-/*--------------block-utm-other--------------*/
-.block-item_other {
-  padding: 10px;
-  box-shadow: var(--bs-el);
-  border-radius: var(--br);
-  border: none;
-  display: inline-block;
+/*--------------list_additional_param-------------*/
+.list_additional_params {
+  list-style-type: none;
+  padding:0;
+  margin:0;
 }
-/*--------------// block-utm-other--------------*/
-#result__link {
-  padding: 10px;
-  box-shadow: var(--bs-el);
-  border-radius: var(--br);
+.additional_param-item h3 {
+  font-weight:400;
+  font-size:14px;
+  margin:0;
 }
-#result__link-input textarea {
-  box-sizing:border-box;
-  padding:2px 10px;
+.additional_param-item input {
+  height:2em;
   width:100%;
-  border-radius:var(--br);
-  resize:none;
 }
-
-@media (max-width: 470px) {
-  
-}
-/*--------------// section_utm_params--------------*/
-
-
+/*--------------// list_additional_param--------------*/
+/*-------------- buttons--------------*/
 .buttons {
   margin-bottom:10px;
 }
@@ -186,4 +186,25 @@ textarea {
   box-shadow: 0px 0px 10px 2px var(--color-palette);
   color: #ffffff;
 }
+/*--------------// buttons--------------*/
+#result__link {
+  padding: 10px;
+  box-shadow: var(--bs-el);
+  border-radius: var(--br);
+}
+#result__link-input textarea {
+  box-sizing:border-box;
+  padding:2px 10px;
+  width:100%;
+  border-radius:var(--br);
+  resize:none;
+}
+
+@media (max-width: 470px) {
+  
+}
+/*--------------// section_utm_params--------------*/
+
+
+
 /*--------------// CONTENT --------------*/

@@ -58,9 +58,9 @@
                                             <li><input id="social_post" type="radio" value="utm_medium=social_post">social_post</input></li>
                                             <li><input id="referral" type="radio" value="utm_medium=referral">referral</input></li>
                                             <li><input id="social" type="radio" value="utm_medium=social">social</input></li>
-                                            <li id="My_variant_medium">
-                                                <input  type="radio" value="My_variant_medium"></input>
-                                                <input type="text" placeholder="Свой вариант"></input>
+                                            <li class="yours_variant_medium">
+                                                <input  type="radio" value="yours_variant_medium"></input>
+                                                <input type="text" placeholder="Ваш вариант"></input>
                                             </li>
                                         </ul>    
                                     </li>
@@ -68,18 +68,31 @@
                                     <!-- additional_param-->
                                     <li class="item">
                                         <h3 class="title">additional_param</h3>
-                                        <div class="block-item" id="block__utm_campaign">
-                                            <div id="header_utm_campaign">utm_campaign:</div>
-                                            <input id="utm_campaign-input" type="text" placeholder="Введите" value="" size="19"></input>
-                                        </div>
-                                        <div class="block-item" id="block__utm_content">
-                                            <div id="header_utm_content">utm_content:</div>
-                                            <input type="text" placeholder="Введите" value="" size="19"></input>
-                                        </div>
-                                        <div class="block-item" id="block__utm_term">
-                                            <div id="header_utm_term">utm_term:</div>
-                                            <input type="text" placeholder="Введите" value="" size="19"></input>
-                                        </div>
+                                        <ul class="list list_additional_params">
+                                            <li class="additional_param-item utm_campaign">
+                                                <h3 class="visually-hidden">utm_campaign</h3>
+                                                <label class="title">
+                                                    utm_campaign:
+                                                    <input  type="text" placeholder="Введите" value=""></input>
+                                                </label>
+                                            </li>
+                                            <li class="additional_param-item utm_content">
+                                                <h3 class="visually-hidden">utm_content</h3>
+                                                <label class="title">
+                                                    utm_content:
+                                                    <input type="text" placeholder="Введите" value=""></input>
+                                                </label>
+
+                                            </li>
+                                            <li class="additional_param-item utm_term">
+                                                <h3 class="visually-hidden">utm_term</h3>
+                                                <label class="title">
+                                                    utm_term
+                                                    <input type="text" placeholder="Введите" value=""></input>
+                                                </label>
+                                                
+                                            </li>
+                                        </ul>
                                     </li>
                                     <!--// additional_param-->
                                 </div>

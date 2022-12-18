@@ -1,5 +1,5 @@
 let modelCtrl = function () {
-    let data,one;
+    let data, one;
     data = {
             sitelink:"sew-world.ru",
             name_utm:{
@@ -36,6 +36,6 @@ let modelCtrl = function () {
 
 return {
     
-    data:data,   
+    data:data,
     }
 }

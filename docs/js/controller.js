@@ -1,13 +1,18 @@
 (function ctrl (modelCtrl, UIctrl) {
     modelCtrlObj = modelCtrl();
-    ///Получаем объект с элементами
+    //--------- Get object with elements --------//
     DOMstrings = UIctrl().DOMstrings;
-    //Переменные
-    let link,source,medium, readylink,campaign,content,term;
+    //--------- variables ---------//
+    let link, 
+        source, medium, campaign, content, term,
+        readylink;
+
     campaign ="";
     content ="";
     term ="";
-    //Событие - введение ссылки
+    //---------// variables ---------//
+
+    //Event - введение ссылки
     DOMstrings.link.addEventListener("change", getLink);
     function getLink () {
         //Проверка содержит ли что-то
@@ -41,7 +46,9 @@
     }
         return link;
     }
-    //Событие - выбор галочек на source
+
+
+    //Event - выбор галочек на source
     DOMstrings.listSources.addEventListener("click", getSource);
     function getSource (e) {
         if (e.target.type == 'radio') {
@@ -62,7 +69,9 @@
                 return source;
             }
     }
-    //Событие - выбор галочек на medium
+
+
+    //Event - выбор галочек на medium
     DOMstrings.listMedium.addEventListener("click", getMedium);
     function getMedium (e) {
         if (e.target.type == 'radio') {
@@ -73,9 +82,9 @@
                    element.checked = false;
                 }          
             })
-            if (e.target.value == "My_variant_medium") {
+            if (e.target.value == ".yours_variant_medium") {
                 
-                medium = `utm_medium=${DOMstrings.MyVariantMedium.value}`;
+                medium = `utm_medium=${DOMstrings.yoursVariantMedium.value}`;
                 
             } else {
                 medium = e.target.value;
@@ -84,7 +93,7 @@
             return medium;
         }    
     }
-    //Событие - выбор галочек на campaign
+    //Event - выбор галочек на campaign
     DOMstrings.campaignInput.addEventListener("change", getCampaign);
     function getCampaign () {
         
@@ -101,7 +110,7 @@
         
         return campaign;
     }
-    //Событие - выбор галочек на content
+    //Event - выбор галочек на content
     DOMstrings.contentInput.addEventListener("change", getContent);
     function getContent () {
         
@@ -119,7 +128,7 @@
         return content;
     }
 
-    //Событие - выбор галочек на term
+    //Event - выбор галочек на term
     DOMstrings.termInput.addEventListener("change", getTerm);
     function getTerm () {
         
@@ -138,8 +147,8 @@
         return term;
     }
 
-    //Событие - нажатие на кнопку Сгенерировать
-    DOMstrings.buttonGo.addEventListener("click", getResult)
+    //Event - нажатие на кнопку Сгенерировать
+    DOMstrings.buttonGenerate.addEventListener("click", getResult)
     function getResult (e) {
         
         //Если поля заполнены, то проверяем на знак /?
@@ -156,12 +165,12 @@
             DOMstrings.readyLink.value ="Не корректно заполнены поля";
         }
     }
-    //Событие - нажатие на кнопку Сброс
+    //Event - нажатие на кнопку Сброс
     DOMstrings.buttonReset.addEventListener("click", reset)
     function reset () {
         window.location.reload ();
     }
-    //Событие - нажатие на кнопку Скопировать
+    //Event - нажатие на кнопку Скопировать
     DOMstrings.buttonCopy.addEventListener("click", copy)
     function copy () {
         /* сохраняем текстовое поле в переменную text */
@@ -171,6 +180,8 @@
       //очистим выделение текста, чтобы пользователь "не парился"
       window.getSelection().removeAllRanges();
     }
+
+    
     return {
         getLink:getLink(),
         getSource:getSource(),
