@@ -126,17 +126,16 @@ textarea {
   text-align:center;
   margin:0;
 }
-/*-------------- block__utm_source --------------*/
-/*id="all_source"  .list_sources */
-.list_sources {
+
+.item .list {
   list-style-type: none;
   padding:0;
   margin:0;
 }
+/*-------------- block__utm_source --------------*/
+
 /*--------------// block__utm_source --------------*/
 /*--------------block-utm-medium--------------*/
-/*id="header utm_medium"*/
-
 /*--------------// block-utm-medium--------------*/
 /*--------------block-utm-other--------------*/
 .block-item_other {

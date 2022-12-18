@@ -63,11 +63,11 @@
             }
     }
     //Событие - выбор галочек на medium
-    DOMstrings.allMedium.addEventListener("click", getMedium);
+    DOMstrings.listMedium.addEventListener("click", getMedium);
     function getMedium (e) {
         if (e.target.type == 'radio') {
             //События, чтобы стирать все radio метки и оставлять только выбранную
-            DOMstrings.allMediumInput.forEach((element)=> {
+            DOMstrings.listMediumInput.forEach((element)=> {
                 
                 if (element != e.target) {
                    element.checked = false;

@@ -1,6 +1,6 @@
 function UIctrl (ctrl) {
     let link, linkValue, listSources, 
-        listSourcesInput, allMedium, allMediumInput,
+        listSourcesInput, listMedium, listMediumInput,
         buttonGo, buttonReset, readyLink, yoursVariantSource;
 
     //--------input section_url_link------------//
@@ -13,10 +13,12 @@ function UIctrl (ctrl) {
     yoursVariantSource = document.querySelector(".yours_variant_source > input[type=text]");
     //--------// choice of sources------------//
 
-    //поля выбора medium
-    allMedium = document.querySelector("#all_medium");
-    allMediumInput = document.querySelectorAll("#all_medium > li > input");
+    //--------choice of medium------------//
+    listMedium = document.querySelector(".list_medium");
+    listMediumInput = document.querySelectorAll(".list_medium > li > input");
     MyVariantMedium = document.querySelector("#My_variant_medium > input[type=text]");
+    //--------// choice of medium------------//
+
     //полe выбора campaign
     campaignInput = document.querySelector("#block__utm_campaign > input[type=text]");
     //полe выбора content
@@ -45,8 +47,8 @@ function UIctrl (ctrl) {
                 listSourcesInput:listSourcesInput,
                 yoursVariantSource:yoursVariantSource,
 
-                allMedium:allMedium,
-                allMediumInput:allMediumInput,
+                listMedium:listMedium,
+                listMediumInput:listMediumInput,
                 MyVariantMedium:MyVariantMedium,
 
                 campaignInput:campaignInput,
