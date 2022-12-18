@@ -8,20 +8,22 @@
             UTM-Generator
         </title>
         <link rel="stylesheet" href="css/main.css" />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
-            rel="stylesheet"
-        />
+
+        <link 
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" 
+        rel="stylesheet">
     </head>
     <body>
         <div class="main">
             <div class="wrapper">
-                <div id="block__link">
-                    <div id="header_link">site:</div>
-                    <input type="text" placeholder="Введите" value=""></input>
+                
+                <div class="block__url_link">
+                    <div id="block__link">
+                        <div id="header_link">URL</div>
+                        <input type="text" placeholder="Введите" value=""></input>
+                    </div>
                 </div>
-                <div class="block">
-                    <div class="block-item_general">
+                <div class="wrapper_block">
                         <div class="block-item" id="block__utm_source">
                             <div id="header__utm_source">utm_source</div>
                                 <div>
@@ -42,7 +44,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </div>
+                        </div>
                         <div class="block-item" id="block__utm_medium">
                             <div id="header utm_medium">utm_medium</div>
                                 <ul id="all_medium">
@@ -58,9 +60,8 @@
                                         <input type="text" placeholder="Свой вариант"></input>
                                     </li>
                                 </ul>
-                            </div>
-                        </div>        
-                    <div class="block-item_other">
+                        </div>
+                        <div class="block-item_other">
                         <div class="block-item" id="block__utm_campaign">
                             <div id="header_utm_campaign">utm_campaign:</div>
                             <input id="utm_campaign-input" type="text" placeholder="Введите" value="" size="19"></input>
@@ -73,24 +74,24 @@
                             <div id="header_utm_term">utm_term:</div>
                             <input type="text" placeholder="Введите" value="" size="19"></input>
                         </div>
-                    </div>
-                
+                        </div>
                 </div>
                 <div class="buttons">
                     <input type="reset" name="reset" value="Сброс"></input>
                     <input type="submit" name="generate" value="Сгенерировать"></input>
+                    <input type="submit" name="сopy" value="Скопировать" ></input>
                 </div>
                 <div id="result__link">
                     <div>Готовая ссылка:</div>
                     <div id="result__link-input">
-                        <textarea ></textarea>
+                        
+                            <textarea></textarea>
+                        
+                        
                     </div>
                     
                 </div>
-                <div class="buttons">
-                    <input type="submit" name="сopy" value="Скопировать" ></input>
-                </div>
-                
+            </div>
             </div>
         </div>
         
