@@ -3,7 +3,7 @@
     //--------- Get object with elements --------//
     DOMstrings = UIctrl().DOMstrings;
     //--------- variables ---------//
-    let link, 
+    let link, linkValue,
         source, medium, campaign, content, term,
         readylink;
 
@@ -12,38 +12,43 @@
     term ="";
     //---------// variables ---------//
 
-    //Event - введение ссылки
+    //Event - introduction links
     DOMstrings.link.addEventListener("change", getLink);
+    
     function getLink () {
-        //Проверка содержит ли что-то
-        if (DOMstrings.link.value !== '') { 
-        if (DOMstrings.link.value.indexOf("/?", 1)>0) {
-            //Проверка если нашёл /?, то проверяем на // и /
-            if (DOMstrings.link.value.indexOf("/?", 1)>0 && DOMstrings.link.value.endsWith("//")) {
-                //Убираем знак /
-                DOMstrings.link.value = DOMstrings.link.value.slice(0, -2);
-                link = DOMstrings.link.value;
-            } else if (DOMstrings.link.value.indexOf("/?", 1)>0 && DOMstrings.link.value.endsWith("/")) {
-                DOMstrings.link.value = DOMstrings.link.value.slice(0, -1);
-                link = DOMstrings.link.value;
+        linkValue = DOMstrings.link.value;
+        //Сhecking empty string or not
+        /* надо сделать чекбокс для включения и отключения поправки*/
+        if (linkValue !== '') {
+        /* Regexp - все вхождения "/" более 1 раза,
+               но не начинающиеся на "https:" или "http:" замеяем на "/" */
+               let reg = /(?<!https:|http:)(\/+)/g;
+               linkValue = linkValue.replace(reg, "/");
+            //Проверка - есть ли в конце строки "/"
+            if(linkValue.endsWith("/")) {
+                if(linkValue.indexOf("?") > 0){
+                    //Убираем "/" в конце
+                    linkValue = linkValue.slice(0,-1);
+                    //Если не "/?", то заменяем "?" на знак "/?"
+                    if(!(linkValue.indexOf("/?") > 0)) {
+                        linkValue = linkValue.replace(/\?/, "/?");
+                    }
+                }
             } else {
-                link = DOMstrings.link.value;
+                if((linkValue.indexOf("?") > 0)){
+                    //Если не "/?", то заменяем "?" на знак "/?"
+                    if(!(linkValue.indexOf("/?") > 0)) {
+                        linkValue = linkValue.replace(/\?/, "/?");
+                    }
+                } else {
+                    //Добавляем "/" в конце
+                    linkValue = `${linkValue}/`;
+                }
             }
-        } else {
-            //Если знака /? нет, то проверяем также на // и /
-            if (DOMstrings.link.value.endsWith("//")) {
-                DOMstrings.link.value = DOMstrings.link.value.slice(0, -1);
-                link = DOMstrings.link.value;
-            } else if (!DOMstrings.link.value.endsWith("/")) {
-
-                        DOMstrings.link.value = `${DOMstrings.link.value}/`;
-                        link = DOMstrings.link.value;
-            } else {
-                link = DOMstrings.link.value;
-            }
+            DOMstrings.link.value = linkValue;
+            link = linkValue;
             
         }
-    }
         return link;
     }
 
