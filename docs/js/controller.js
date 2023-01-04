@@ -20,10 +20,13 @@
         //Сhecking empty string or not
         /* надо сделать чекбокс для включения и отключения поправки*/
         if (linkValue !== '') {
-        /* Regexp - все вхождения "/" более 1 раза,
+            
+                /* Regexp - все вхождения "/" более 1 раза,
                но не начинающиеся на "https:" или "http:" замеяем на "/" */
                let reg = /(?<!https:|http:)(\/+)/g;
                linkValue = linkValue.replace(reg, "/");
+                //Убираем пробелы в строке ввода
+                linkValue = linkValue.replace(/\s/g, "");
             //Проверка - есть ли в конце строки "/"
             if(linkValue.endsWith("/")) {
                 if(linkValue.indexOf("?") > 0){
