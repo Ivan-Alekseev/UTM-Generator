@@ -128,17 +128,24 @@ textarea {
 }
 .card__list .card__item {
   display: flex;
-  flex-direction: row;
   align-items: center;
 }
 
 .card__item input[type="text"] {
+  display: block;
   border-radius: var(--br);
   height: 2em;
-  width: 100%;
+  width:100%;
+  box-sizing:border-box;
 }
 .custom-source input, .custom-medium input {
   height: 2em;
+}
+.additional-params__item {
+  align-items:flex-start;
+}
+.additional-params__label {
+  width:100%;
 }
 /*--------------// section utm_params--------------*/
 /*-------------- buttons--------------*/
