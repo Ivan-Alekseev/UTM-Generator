@@ -31,10 +31,10 @@
 
         inputText.value = cleanValue;
         inputRadio.value = `utm_source=${cleanValue}`;
-        console.log(cleanValue)
+        
     }
     /*--// Function - custom input source */
-    
+
     /*-- Function - custom input medium */
     DOMstrings.listMedium.querySelector("input[type=text]").addEventListener("change", importValueMedium);
     function importValueMedium() {
@@ -45,7 +45,7 @@
 
         inputText.value = cleanValue;
         inputRadio.value = `utm_medium=${cleanValue}`;
-        console.log(cleanValue)
+        
     }
 
     /*--// Function - custom input medium */
