@@ -1,5 +1,5 @@
 function UIctrl(ctrl) {
-  let link,
+  let linkInput,
     linkValue,
     listSources,
     listSourcesInput,
@@ -15,36 +15,36 @@ function UIctrl(ctrl) {
     buttonCopy,
     readyLink;
 
-  //-------- input section_url_link ------------//
-  link = document.querySelector(".section_url_link input");
-  //--------// input section_url_link ------------//
+  //-------- link input ------------//
+  linkInput = document.querySelector(".link__input");
+  //--------// link input ------------//
 
   //-------- choice of sources ------------//
-  listSources = document.querySelector(".list_sources");
-  listSourcesInput = document.querySelectorAll(".list_sources > li > input");
+  listSources = document.querySelector(".list-sources");
+  listSourcesInput = document.querySelectorAll(".list-sources input");
   yoursVariantSource = document.querySelector(
-    ".yours_variant_source > input[type=text]"
+    ".custom-source input[type=text]"
   );
   //--------// choice of sources ------------//
 
   //-------- choice of medium ------------//
-  listMedium = document.querySelector(".list_medium");
-  listMediumInput = document.querySelectorAll(".list_medium > li > input");
+  listMedium = document.querySelector(".list-mediums");
+  listMediumInput = document.querySelectorAll(".list-mediums input");
   yoursVariantMedium = document.querySelector(
-    ".yours_variant_medium > input[type=text]"
+    ".custom-medium input[type=text]"
   );
   //--------// choice of medium ------------//
 
   //-------- choice of campaign ------------//
-  campaignInput = document.querySelector(".utm_campaign input[type=text]");
+  campaignInput = document.querySelector(".utm-campaign input[type=text]");
   //--------// choice of campaign ------------//
 
   //-------- choice of content ------------//
-  contentInput = document.querySelector(".utm_content input[type=text]");
+  contentInput = document.querySelector(".utm-content input[type=text]");
   //--------// choice of content------------//
 
   //-------- choice of term ------------//
-  termInput = document.querySelector(".utm_term input[type=text]");
+  termInput = document.querySelector(".utm-term input[type=text]");
   //--------// choice of term------------//
 
   //------------ buttons ------------//
@@ -58,7 +58,7 @@ function UIctrl(ctrl) {
   //------------// buttons ------------//
 
   //-------- ready link -------- //
-  readyLink = document.querySelector("#result__link-input > textarea");
+  readyLink = document.querySelector(".ready-link__textarea");
   //--------// ready link -------- //
 
   //-------- Animation ----------------//
@@ -66,7 +66,7 @@ function UIctrl(ctrl) {
   //--------// Animation ----------------//
   return {
     DOMstrings: {
-      link: link,
+      linkInput: linkInput,
 
       listSources: listSources,
       listSourcesInput: listSourcesInput,
