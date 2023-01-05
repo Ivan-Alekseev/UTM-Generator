@@ -5,10 +5,10 @@ function UIctrl(ctrl) {
     linkValue,
     listSources,
     listSourcesInput,
-    yoursVariantSource,
+    customSourceInput,
     listMedium,
     listMediumInput,
-    yoursVariantMedium,
+    customMediumInput,
     campaignInput,
     contentInput,
     termInput,
@@ -24,7 +24,7 @@ function UIctrl(ctrl) {
   //-------- choice of sources ------------//
   listSources = document.querySelector(".list-sources");
   listSourcesInput = document.querySelectorAll(".list-sources input");
-  yoursVariantSource = document.querySelector(
+  customSourceInput = document.querySelector(
     ".custom-source input[type=text]"
   );
   //--------// choice of sources ------------//
@@ -32,7 +32,7 @@ function UIctrl(ctrl) {
   //-------- choice of medium ------------//
   listMedium = document.querySelector(".list-mediums");
   listMediumInput = document.querySelectorAll(".list-mediums input");
-  yoursVariantMedium = document.querySelector(
+  customMediumInput = document.querySelector(
     ".custom-medium input[type=text]"
   );
   //--------// choice of medium ------------//
@@ -71,11 +71,11 @@ function UIctrl(ctrl) {
 
       listSources: listSources,
       listSourcesInput: listSourcesInput,
-      yoursVariantSource: yoursVariantSource,
+      customSourceInput: customSourceInput,
 
       listMedium: listMedium,
       listMediumInput: listMediumInput,
-      yoursVariantMedium: yoursVariantMedium,
+      customMediumInput: customMediumInput,
 
       campaignInput: campaignInput,
       contentInput: contentInput,

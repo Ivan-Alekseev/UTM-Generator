@@ -4,23 +4,54 @@
     DOMstrings = UIctrl().DOMstrings;
     //--------- variables ---------//
     let link, linkValue,
-        source, medium, campaign, content, term,
+        source, medium, campaign ="", content ="", term="",
         readylink;
-
-    campaign ="";
-    content ="";
-    term ="";
     //---------// variables ---------//
     /*-- Function - delete all space */
     function deleteSpace (input) {
-        console.log('1');
         return input.replace(/\s/g, "");
     }
     /*--// Function - delete all space */
 
+
+    /*-- Function - inport value from input */
+    function getValueCheckedInput (list) {
+            return list.querySelector("input:checked").value;
+    }
+    /*--// Function - inport value from input */
+    
+
+    /*-- Function - custom input source */
+    DOMstrings.listSources.querySelector("input[type=text]").addEventListener("change", importValueSource);
+    function importValueSource() {
+        let inputRadio = DOMstrings.listSources.querySelector("input[type=text]").parentElement.querySelector("input[type=radio]");
+        let inputText = DOMstrings.listSources.querySelector("input[type=text]");
+        let value = DOMstrings.listSources.querySelector("input[type=text]").value;
+        let cleanValue = deleteSpace(value);
+
+        inputText.value = cleanValue;
+        inputRadio.value = `utm_source=${cleanValue}`;
+        console.log(cleanValue)
+    }
+    /*--// Function - custom input source */
+    
+    /*-- Function - custom input medium */
+    DOMstrings.listMedium.querySelector("input[type=text]").addEventListener("change", importValueMedium);
+    function importValueMedium() {
+        let inputRadio = DOMstrings.listMedium.querySelector("input[type=text]").parentElement.querySelector("input[type=radio]");
+        let inputText = DOMstrings.listMedium.querySelector("input[type=text]");
+        let value = DOMstrings.listMedium.querySelector("input[type=text]").value;
+        let cleanValue = deleteSpace(value);
+
+        inputText.value = cleanValue;
+        inputRadio.value = `utm_medium=${cleanValue}`;
+        console.log(cleanValue)
+    }
+
+    /*--// Function - custom input medium */
+
     //Event - introduction links
     DOMstrings.linkInput.addEventListener("change", getLink);
-    
     function getLink () {
         linkValue = DOMstrings.linkInput.value;
         let linkCheckbox = DOMstrings.linkCheckboxInput;
@@ -64,23 +95,12 @@
         }
         return link;
     }
-
-
     //Event - выбор галочек на source
-    DOMstrings.listSources.addEventListener("click", getSource);
+    DOMstrings.listSources.addEventListener("change", getSource);
     function getSource (e) {
-        if (e.target.type == 'radio') {
-
-                /*---- Если выбран ввод своего значения */
-                if (e.target.value == ".custom-source") {
-                    
-                    source = `utm_source=${DOMstrings.yoursVariantSource.value}`;
-                } else {
-                    source = e.target.value;
-                }
-                /*----// Если выбран ввод своего значения */
-                return source;
-            }
+        source = getValueCheckedInput(DOMstrings.listSources)
+        
+        return source
     }
 
 
