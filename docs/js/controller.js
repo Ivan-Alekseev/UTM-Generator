@@ -70,16 +70,9 @@
     DOMstrings.listSources.addEventListener("click", getSource);
     function getSource (e) {
         if (e.target.type == 'radio') {
-                
-                //Событие, чтобы стирать все radio метки и оставлять только выбранную
-                DOMstrings.listSourcesInput.forEach((element)=> {
-                    if (element != e.target) {
-                       element.checked = false;
-                    }          
-                })
 
                 /*---- Если выбран ввод своего значения */
-                if (e.target.value == ".yours_variant_source") {
+                if (e.target.value == ".custom-source") {
                     
                     source = `utm_source=${DOMstrings.yoursVariantSource.value}`;
                 } else {
