@@ -185,11 +185,6 @@
             DOMstrings.readyLink.value ="Не корректно заполнены поля";
         }
     }
-    //Event - нажатие на кнопку Сброс
-    DOMstrings.buttonReset.addEventListener("click", reset)
-    function reset () {
-        window.location.reload ();
-    }
     //Event - нажатие на кнопку Скопировать
     DOMstrings.buttonCopy.addEventListener("click", copy)
     function copy () {

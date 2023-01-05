@@ -13,7 +13,6 @@ function UIctrl(ctrl) {
     contentInput,
     termInput,
     buttonGenerate,
-    buttonReset,
     buttonCopy,
     readyLink;
 
@@ -54,8 +53,6 @@ function UIctrl(ctrl) {
 
   //-------- button generate -//
   buttonGenerate = document.querySelector('input[name="generate"]');
-  //-------- button reset -//
-  buttonReset = document.querySelector('input[name="reset"]');
   //-------- button copy -//
   buttonCopy = document.querySelector('input[name="copy"]');
   //------------// buttons ------------//
@@ -85,7 +82,6 @@ function UIctrl(ctrl) {
       termInput: termInput,
 
       buttonGenerate: buttonGenerate,
-      buttonReset: buttonReset,
       buttonCopy: buttonCopy,
       readyLink: readyLink,
     },
