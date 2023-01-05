@@ -13,91 +13,91 @@
     />
   </head>
   <body>
-    <div class="main">
-      <div class="main-wrapper">
-        <div class="header">
-          <h1 class="header-title">генератор UTM-меток</h1>
-        </div>
+    <div class="page">
+      <div class="page-wrapper">
+        <header class="header">
+          <h1 class="header__title">Генератор UTM-меток</h1>
+        </header>
         <div class="content">
           <div class="content-wrapper">
-            <section class="section_url_link">
-              <h2 class="title">URL</h2>
-              <input type="text" placeholder="Введите" value="" />
+            <section class="link">
+              <h2 class="link__title">URL</h2>
+              <input class="link__input" type="text" placeholder="Введите" value="" />
             </section>
-            <section class="section_utm_params">
-              <div class="section_utm_params-wrapper">
-                <div class="section_utm_params-list">
+            <section class="utm-params">
+              <div class="utm-params-wrapper">
+                <div class="utm-params__cards">
                   <!-- sources-->
-                  <li class="item">
-                    <h3 class="title">utm_source</h3>
-                    <ul class="list list_sources">
-                      <li>
-                        <input
+                  <li class="card">
+                    <h3 class="card__title">utm_source</h3>
+                    <ul class="card__list list-sources">
+                      <li class="card__item">
+                        <input 
                           id="mytarget"
                           type="radio"
                           value="utm_source=mytarget"
                         />mytarget
                       </li>
-                      <li>
+                      <li class="card__item">
                         <input
                           id="yandex"
                           type="radio"
                           value="utm_source=yandex"
                         />yandex
                       </li>
-                      <li>
+                      <li class="card__item">
                         <input id="vk" type="radio" value="utm_source=vk" />vk
                       </li>
-                      <li>
+                      <li class="card__item">
                         <input
                           id="google"
                           type="radio"
                           value="utm_source=google"
                         />google
                       </li>
-                      <li>
+                      <li class="card__item">
                         <input
                           id="instagram"
                           type="radio"
                           value="utm_source=instagram"
                         />instagram
                       </li>
-                      <li>
+                      <li class="card__item">
                         <input
                           id="facebook"
                           type="radio"
                           value="utm_source=facebook"
                         />facebook
                       </li>
-                      <li>
+                      <li class="card__item">
                         <input
                           id="telegram"
                           type="radio"
                           value="utm_source=telegram"
                         />telegram
                       </li>
-                      <li>
+                      <li class="card__item">
                         <input
                           id="youtube"
                           type="radio"
                           value="utm_source=youtube"
                         />youtube
                       </li>
-                      <li>
+                      <li class="card__item">
                         <input
                           id="sms"
                           type="radio"
                           value="utm_source=sms"
                         />sms
                       </li>
-                      <li>
+                      <li class="card__item">
                         <input
                           id="rassilka_vk"
                           type="radio"
                           value="utm_source=rassilka_vk"
                         />rassilka_vk
                       </li>
-                      <li class="yours_variant_source">
+                      <li  class="card__item custom-source">
                         <input type="radio" value="yours_variant_source" />
                         <input type="text" placeholder="Ваш вариант" />
                       </li>
@@ -105,88 +105,88 @@
                   </li>
                   <!--// sources-->
                   <!-- medium-->
-                  <li class="item">
-                    <h3 class="title">utm_medium</h3>
-                    <ul class="list list_medium">
-                      <li>
+                  <li class="card">
+                    <h3 class="card__title">utm_medium</h3>
+                    <ul class="card__list list-mediums">
+                      <li  class="card__item">
                         <input
                           id="taplink"
                           type="radio"
                           value="utm_source=taplink"
                         />taplink
                       </li>
-                      <li>
+                      <li  class="card__item">
                         <input
                           id="cpm"
                           type="radio"
                           value="utm_medium=cpm"
                         />cpm
                       </li>
-                      <li>
+                      <li  class="card__item">
                         <input
                           id="cpc"
                           type="radio"
                           value="utm_medium=cpc"
                         />cpc
                       </li>
-                      <li>
+                      <li  class="card__item">
                         <input
                           id="display"
                           type="radio"
                           value="utm_medium=display"
                         />display
                       </li>
-                      <li>
+                      <li  class="card__item">
                         <input
                           id="social_post"
                           type="radio"
                           value="utm_medium=social_post"
                         />social_post
                       </li>
-                      <li>
+                      <li  class="card__item">
                         <input
                           id="referral"
                           type="radio"
                           value="utm_medium=referral"
                         />referral
                       </li>
-                      <li>
+                      <li  class="card__item">
                         <input
                           id="social"
                           type="radio"
                           value="utm_medium=social"
                         />social
                       </li>
-                      <li class="yours_variant_medium">
-                        <input type="radio" value="yours_variant_medium" />
+                      <li class="card__item custom-medium">
+                        <input type="radio" value="custom-medium" />
                         <input type="text" placeholder="Ваш вариант" />
                       </li>
                     </ul>
                   </li>
                   <!--// medium-->
                   <!-- additional_param-->
-                  <li class="item">
-                    <h3 class="title">additional_param</h3>
-                    <ul class="list list_additional_params">
-                      <li class="additional_param-item utm_campaign">
+                  <li class="card">
+                    <h3 class="card__title">additional_param</h3>
+                    <ul class="card__list list-additional-params">
+                      <li class="card__item additional-params__item utm-campaign">
                         <h3 class="visually-hidden">utm_campaign</h3>
-                        <label class="title">
+                        <label class="additional-params__label">
                           utm_campaign:
-                          <input type="text" placeholder="Введите" value="" />
+                          <input class="additional-params__input" type="text" placeholder="Введите" value="" />
                         </label>
                       </li>
-                      <li class="additional_param-item utm_content">
+                      <li class="card__item additional-params__item utm-content">
                         <h3 class="visually-hidden">utm_content</h3>
-                        <label class="title">
+                        <label class="additional-params__label">
                           utm_content:
-                          <input type="text" placeholder="Введите" value="" />
+                          <input class="additional-params__input" type="text" placeholder="Введите" value="" />
                         </label>
                       </li>
-                      <li class="additional_param-item utm_term">
+                      <li class="card__item additional-params__item utm-term">
                         <h3 class="visually-hidden">utm_term</h3>
-                        <label class="title">
+                        <label class="additional-params__label">
                           utm_term
-                          <input type="text" placeholder="Введите" value="" />
+                          <input class="additional-params__input" type="text" placeholder="Введите" value="" />
                         </label>
                       </li>
                     </ul>
@@ -195,22 +195,20 @@
                 </div>
               </div>
             </section>
-            <div class="buttons">
-              <input type="reset" name="reset" value="Сброс" />
-              <input type="submit" name="generate" value="Сгенерировать" />
-              <input type="submit" name="сopy" value="Скопировать" />
+            <div class="list-buttons">
+              <input class="button" type="reset" name="reset" value="Сброс" />
+              <input class="button" type="submit" name="generate" value="Сгенерировать" />
+              <input class="button" type="submit" name="copy" value="Скопировать" />
             </div>
-            <section class="section_result__link" id="result__link">
-              <div>Готовая ссылка:</div>
-              <div id="result__link-input">
-                <textarea></textarea>
-              </div>
+            <section class="ready-link">
+              <div class="ready-link__title">Готовая ссылка:</div>
+              <textarea class="ready-link__textarea"></textarea>
             </section>
-            <aside class="instruction">
-              <div class="instruction-wrapper">
-                <h2 class="title visually-hidden">Инструкция</h2>
-              </div>
-            </aside>
+            <div class="instruction-wrapper">
+              <aside class="instruction">
+                <h2 class="instruction__title visually-hidden">Инструкция</h2>
+              </aside>
+            </div>
           </div>
         </div>
 
