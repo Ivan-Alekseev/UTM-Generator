@@ -88,13 +88,7 @@
     DOMstrings.listMedium.addEventListener("click", getMedium);
     function getMedium (e) {
         if (e.target.type == 'radio') {
-            //События, чтобы стирать все radio метки и оставлять только выбранную
-            DOMstrings.listMediumInput.forEach((element)=> {
-                
-                if (element != e.target) {
-                   element.checked = false;
-                }          
-            })
+            
             if (e.target.value == ".yours_variant_medium") {
                 
                 medium = `utm_medium=${DOMstrings.yoursVariantMedium.value}`;
