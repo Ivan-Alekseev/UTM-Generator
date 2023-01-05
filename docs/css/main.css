@@ -75,11 +75,20 @@ textarea {
 /*-------------- section link--------------*/
 .link {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   padding: 10px;
   box-shadow: var(--bs-el);
   border-radius: var(--br);
   margin-bottom: 10px;
+}
+.link__input-area {
+  display: flex;
+}
+.link__checkbox {
+  padding-top:6px;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
 }
 .link__title {
   font-size: 14px;
@@ -94,6 +103,10 @@ textarea {
   border-radius: 0px var(--br) var(--br) 0px;
   padding: 10px;
 }
+.link__checkbox {
+  display:inline-block;
+}
+
 /*--------------// section link--------------*/
 /*-------------- section utm_params--------------*/
 .utm-params {

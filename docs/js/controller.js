@@ -11,46 +11,56 @@
     content ="";
     term ="";
     //---------// variables ---------//
+    /*-- Function - delete all space */
+    function deleteSpace (input) {
+        console.log('1');
+        return input.replace(/\s/g, "");
+    }
+    /*--// Function - delete all space */
 
     //Event - introduction links
-    DOMstrings.link.addEventListener("change", getLink);
+    DOMstrings.linkInput.addEventListener("change", getLink);
     
     function getLink () {
-        linkValue = DOMstrings.link.value;
+        linkValue = DOMstrings.linkInput.value;
+        let linkCheckbox = DOMstrings.linkCheckboxInput;
         //Сhecking empty string or not
         /* надо сделать чекбокс для включения и отключения поправки*/
         if (linkValue !== '') {
-            
-                /* Regexp - все вхождения "/" более 1 раза,
-               но не начинающиеся на "https:" или "http:" замеяем на "/" */
-               let reg = /(?<!https:|http:)(\/+)/g;
-               linkValue = linkValue.replace(reg, "/");
-                //Убираем пробелы в строке ввода
-                linkValue = linkValue.replace(/\s/g, "");
-            //Проверка - есть ли в конце строки "/"
-            if(linkValue.endsWith("/")) {
-                if(linkValue.indexOf("?") > 0){
-                    //Убираем "/" в конце
-                    linkValue = linkValue.slice(0,-1);
-                    //Если не "/?", то заменяем "?" на знак "/?"
-                    if(!(linkValue.indexOf("/?") > 0)) {
-                        linkValue = linkValue.replace(/\?/, "/?");
-                    }
-                }
-            } else {
-                if((linkValue.indexOf("?") > 0)){
-                    //Если не "/?", то заменяем "?" на знак "/?"
-                    if(!(linkValue.indexOf("/?") > 0)) {
-                        linkValue = linkValue.replace(/\?/, "/?");
+            if(linkCheckbox.checked) {
+                    /* Regexp - все вхождения "/" более 1 раза,
+                но не начинающиеся на "https:" или "http:" замеяем на "/" */
+                let reg = /(?<!https:|http:)(\/+)/g;
+                linkValue = linkValue.replace(reg, "/");
+                    //Убираем пробелы в строке ввода
+                    linkValue = deleteSpace(linkValue);
+                //Проверка - есть ли в конце строки "/"
+                if(linkValue.endsWith("/")) {
+                    if(linkValue.indexOf("?") > 0){
+                        //Убираем "/" в конце
+                        linkValue = linkValue.slice(0,-1);
+                        //Если не "/?", то заменяем "?" на знак "/?"
+                        if(!(linkValue.indexOf("/?") > 0)) {
+                            linkValue = linkValue.replace(/\?/, "/?");
+                        }
                     }
                 } else {
-                    //Добавляем "/" в конце
-                    linkValue = `${linkValue}/`;
+                    if((linkValue.indexOf("?") > 0)){
+                        //Если не "/?", то заменяем "?" на знак "/?"
+                        if(!(linkValue.indexOf("/?") > 0)) {
+                            linkValue = linkValue.replace(/\?/, "/?");
+                        }
+                    } else {
+                        //Добавляем "/" в конце
+                        linkValue = `${linkValue}/`;
+                    }
                 }
+                DOMstrings.linkInput.value = linkValue;
+                link = linkValue;
+                
             }
-            DOMstrings.link.value = linkValue;
+        } else {
             link = linkValue;
-            
         }
         return link;
     }
@@ -61,19 +71,21 @@
     function getSource (e) {
         if (e.target.type == 'radio') {
                 
-                //События, чтобы стирать все radio метки и оставлять только выбранную
+                //Событие, чтобы стирать все radio метки и оставлять только выбранную
                 DOMstrings.listSourcesInput.forEach((element)=> {
                     if (element != e.target) {
                        element.checked = false;
                     }          
                 })
+
+                /*---- Если выбран ввод своего значения */
                 if (e.target.value == ".yours_variant_source") {
                     
                     source = `utm_source=${DOMstrings.yoursVariantSource.value}`;
                 } else {
                     source = e.target.value;
                 }
-                
+                /*----// Если выбран ввод своего значения */
                 return source;
             }
     }

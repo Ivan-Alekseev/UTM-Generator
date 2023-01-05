@@ -1,5 +1,7 @@
 function UIctrl(ctrl) {
-  let linkInput,
+  let 
+    linkInput,
+    linkCheckboxInput,
     linkValue,
     listSources,
     listSourcesInput,
@@ -17,6 +19,7 @@ function UIctrl(ctrl) {
 
   //-------- link input ------------//
   linkInput = document.querySelector(".link__input");
+  linkCheckboxInput = document.querySelector(".link__checkbox-input");
   //--------// link input ------------//
 
   //-------- choice of sources ------------//
@@ -67,6 +70,7 @@ function UIctrl(ctrl) {
   return {
     DOMstrings: {
       linkInput: linkInput,
+      linkCheckboxInput: linkCheckboxInput,
 
       listSources: listSources,
       listSourcesInput: listSourcesInput,
